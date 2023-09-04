@@ -14,7 +14,7 @@ pipeline {
                           image: node:18.17-alpine3.17
                           command: ["sleep", "infinity"]
                         - name: rust
-                          image: rust:1.72-alpine3.17
+                          image: rust:1.61-alpine3.15
                           command: ["sleep", "infinity"]
             '''
         }
