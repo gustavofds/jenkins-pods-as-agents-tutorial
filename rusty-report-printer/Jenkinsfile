@@ -16,10 +16,10 @@ pipeline {
                     resources:
                       requests:
                         cpu: 100m
-                        memory: 128Mi
+                        memory: 512Mi
                       limits:
                         cpu: 1
-                        memory: 128Mi
+                        memory: 512Mi
                   - name: node
                     image: node:18.2.0-alpine3.15
                     command: ["sleep", "infinity"]
