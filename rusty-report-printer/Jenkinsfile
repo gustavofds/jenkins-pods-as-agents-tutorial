@@ -78,7 +78,7 @@ pipeline {
         stage('Build Image') {
             steps {
                 dir(PROJECT_DIR) {
-                    container('kaniki') {
+                    container('kaniko') {
                         sh '''/kaniko/executor --context=. \\
                         --dockerfile=./Dockerfile \\
                         --destination=rusty-report-printer:v0.1.0 \\
