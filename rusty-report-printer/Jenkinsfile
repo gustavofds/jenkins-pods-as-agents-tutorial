@@ -69,13 +69,16 @@ pipeline {
 
         stage('Build Image') {
             steps {
-                kaniko.buildNoPush(
+                script {
+                  kaniko.buildNoPush(
                     imageName: 'rusty-report-printer',
                     imageTag: getImageTags(),
                     context: PROJECT_DIR,
                     dockerfile: './Dockerfile',
                     extraArgs: '--use-new-run --snapshotMode=redo'
-                )
+                  )
+                }
+                
             }
         }
 
