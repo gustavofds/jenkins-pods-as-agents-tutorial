@@ -2,7 +2,7 @@ FROM rustlang/rust:nightly-alpine as build
 
 ENV CARGO_UNSTABLE_SPARSE_REGISTRY=true
 
-RUN apk add --no-cache musl-dev=1.2.2-r9
+RUN apk add --no-cache musl-dev=1.2.3-r5
 
 WORKDIR /app
 COPY ./Cargo* .
